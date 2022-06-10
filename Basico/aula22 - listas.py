@@ -9,8 +9,13 @@ range
 #  Jogo de Forca
 secreto = 'perfume'
 digitadas = []
+chances = 3
 
 while True:  # Laço infinito
+    if chances <= 0:
+        print('Você Perdeu!')
+        break
+
     letra = input('Digite uma letra: ')
 
     if len(letra) > 1:
@@ -37,6 +42,12 @@ while True:  # Laço infinito
         break
     else:
         print(f'A palavra secreta está assim: {secreto_temporario}')
+
+    if letra not in secreto:
+        chances -= 1
+
+    print(f'Você ainda tem {chances} chances')
+    print()
 
 #     0 1 2 3 4 5 6 7 8
 # l2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
