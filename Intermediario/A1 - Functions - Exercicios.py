@@ -3,7 +3,9 @@
 def saudacao(saudacao, nome):
     print(saudacao, nome)
 
+
 saudacao('Bem Vindo!', 'Fulano')
+
 
 # 2 - 3 numeros, e soma
 
@@ -36,10 +38,11 @@ def FizzBuzz(numero):
         return 'Fizz'
     return numero
 
+
 print(FizzBuzz(9))
 
 from random import randint
 
 for i in range(100):
-    aleatorio = randint(0,100)
+    aleatorio = randint(0, 100)
     print(FizzBuzz(aleatorio))
